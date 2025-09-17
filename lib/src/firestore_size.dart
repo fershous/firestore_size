@@ -51,6 +51,7 @@ final class FirestoreSize {
         DocumentReference(:String path) => documentNameSize(path),
         List items => items.fold(0, (int sum, item) => sum + sizeOf(item)),
         Map map => _sizeOfMap(map),
+        DateTime() => 8,
         _ => throw ArgumentError('Unsupported type: ${value.runtimeType}'),
       };
 
